@@ -159,24 +159,26 @@ nav {
 /*------ THIRD SECTIONS - ICONS ------------------------*/
 
 .icons {
-    border-bottom: 28px solid #eeeeee;
     margin: 0 100px 0 100px;
+    border-bottom: 28px solid #eeeeee;
 }
 
-.icons::after {
+.icons:after {
     content: "";
-    position: absolute;
+    position: relative;
     left: 50%;
     bottom: 100%;
     border-style: solid;
-    border-color: red red red red;
+    border-color: transparent transparent red transparent;      /* triangle */
+    border-width: 15px;                                         /* bigger */
 }
 
 .icons ul {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 80px;
 }
 
 
