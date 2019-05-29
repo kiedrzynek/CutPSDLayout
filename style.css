@@ -160,6 +160,7 @@ nav {
 
 .icons {
     border-bottom: 28px solid #eeeeee;
+    margin: 0 100px 0 100px;
 }
 
 .icons::after {
@@ -176,15 +177,27 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    
 }
 
-.icons-list i,
-.icons-list p {
+
+.icons-list {
     text-align: center;
 }
 
 .icons i {
     font-size: 400%;
     margin-top: 40px;
+}
+
+.icons-list p {
+    margin: 10px;
+}
+
+.icon-big:active,
+.icon-big:hover {
+    color: #1bb0cb;
+}
+
+ul li:nth-child(2) {
+    margin-top: 30px;
 }
