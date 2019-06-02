@@ -164,7 +164,7 @@ nav {
     text-transform: uppercase;
 }
 
-/*------ THIRD SECTIONS - ICONS ------------------------*/
+/*------ THIRD SECTION - ICONS ------------------------*/
 
 .icons {
     border-bottom: 2px solid #eeeeee;
@@ -211,7 +211,8 @@ ul li:nth-child(2) {
     margin-top: 30px;
 }
 
-/*------ FOURTH SECTIONS - GALLERY ------------------------*/
+
+/*------ 4TH SECTION - GALLERY ------------------------*/
 
 .gallery-on-click {
     background-color: #eeeeee;
@@ -232,4 +233,17 @@ ul li:nth-child(2) {
 
 .photo-box p {
     padding: 10px 20px 15px 20px;
+}
+
+
+/*------ 5TH SECTION - PARTNER'S LOGOS ------------------------*/
+
+.partners-logos-wrapper img {
+    width: 15%;
+    margin: 10px 20px 10px 20px;
+    filter: grayscale(100%);
+}
+
+.partners-logos-wrapper {
+    height: 50%;
 }
