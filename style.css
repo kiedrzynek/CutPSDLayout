@@ -31,6 +31,10 @@ h3 {
     margin: 0 160px 0 160px;
 }
 
+h4 {
+    font-weight: bold;
+}
+
 section {
     margin: 0 100px 0 100px;
 }
@@ -213,11 +217,19 @@ ul li:nth-child(2) {
     background-color: #eeeeee;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr 1fr;
 }
 
 .photo-box {
-    border: 1px solid #7e7e7e;
+    border: 2px solid #dddddd;
     justify-self: center;
     margin: 20px;
+}
+
+.photo-box h4 {
+    padding: 15px 20px 0 20px;
+}
+
+.photo-box p {
+    padding: 10px 20px 15px 20px;
 }
