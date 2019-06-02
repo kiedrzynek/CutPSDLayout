@@ -31,6 +31,10 @@ h3 {
     margin: 0 160px 0 160px;
 }
 
+section {
+    margin: 0 100px 0 100px;
+}
+
 header {
     background-color: #000;
     background-image: url(img/hero2.png);
@@ -159,18 +163,17 @@ nav {
 /*------ THIRD SECTIONS - ICONS ------------------------*/
 
 .icons {
-    margin: 0 100px 0 100px;
-    border-bottom: 28px solid #eeeeee;
+    border-bottom: 2px solid #eeeeee;
 }
 
 .icons:after {
     content: "";
     position: relative;
-    left: 50%;
-    bottom: 100%;
+    left: 45%;
+    bottom: 40px;
     border-style: solid;
-    border-color: transparent transparent red transparent;      /* triangle */
-    border-width: 15px;                                         /* bigger */
+    border-color: transparent transparent #eeeeee transparent;      /* triangle */
+    border-width: 60px;                                         /* bigger */
 }
 
 .icons ul {
@@ -202,4 +205,19 @@ nav {
 
 ul li:nth-child(2) {
     margin-top: 30px;
+}
+
+/*------ FOURTH SECTIONS - GALLERY ------------------------*/
+
+.gallery-on-click {
+    background-color: #eeeeee;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.photo-box {
+    border: 1px solid #7e7e7e;
+    justify-self: center;
+    margin: 20px;
 }
