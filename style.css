@@ -221,7 +221,7 @@ ul li:nth-child(2) {
 
 .gallery-wrapper {
     margin: 0 100px 0 100px;
-    display: grid;
+    display: grid;                              /* why is this grid not RWD? */
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
@@ -243,12 +243,17 @@ ul li:nth-child(2) {
 
 /*------ 5TH SECTION - PARTNER'S LOGOS ------------------------*/
 
-.partners-logos-wrapper img {
-    width: 15%;
-    margin: 10px 20px 10px 20px;
-    filter: grayscale(100%);
+.partners-logos-wrapper {
+    margin: 20px;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 
-.partners-logos-wrapper {
-    height: 50%;
+.partners-logos-wrapper img {
+    width: 45%;
+    filter: grayscale(100%);
+    filter: contrast(2%);
+    place-self: center;
 }
