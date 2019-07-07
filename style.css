@@ -42,7 +42,7 @@ section {
 header {
     background-color: #000;
     background-image: url(img/hero2.png);
-    /*background-size: cover;*/
+    background-size: cover;
     background-position: bottom;
     height: 98vh;
     border-bottom: 13px solid rgba(255, 255, 255, 0.6);
