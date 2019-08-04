@@ -35,6 +35,13 @@ h4 {
     font-weight: bold;
 }
 
+h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 130%;
+    font-weight: lighter;
+    margin: 15px 0 15px 0;
+}
+
 section {
     margin: 0 100px 0 100px;
 }
@@ -259,4 +266,73 @@ ul li:nth-child(2) {
     filter: grayscale(100%);
     filter: contrast(2%);
     place-self: center;
+}
+
+/*------ 6TH SECTION - FOOTER ------------------------*/
+
+footer {
+    color: #ababab;
+    background-color: #646464;
+}
+
+footer h5 {
+    color: #fff;
+}
+
+.footer-signature {
+    background-color: #272728;
+    padding-top: 12px;
+    margin: 0;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul:first-child {
+    margin: 0 100px 40px 100px;
+    display: flex;           
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+footer ul:first-child li {
+    margin: 10px 20px 10px 0;
+    width: 15em;
+}
+
+.footer-signature p {
+    height: 23px;
+    transform: translate(0, 70%);
+    margin-left: 15%;
+}
+
+.fa-clock,
+.fa-map-marker-alt,
+.fa-envelope,
+.fa-phone {
+    color: #00bac6;
+    display: inline-block;
+    margin: 10px 20px 10px 5px;
+}
+
+.fa-clock {
+    margin: 10px 5px 10px 0;
+}
+
+footer li:first-child > p:nth-of-type(even)::before {
+    content: " ";
+    border-top: 1px solid rgb(116, 116, 116);
+    padding-right: 80px;
+    width: 60%;
+    display: block;
+    margin: 15px 0 15px 0;
+}
+
+footer li:nth-child(3) > p:first-of-type {
+    margin-bottom: 15px;
+}
+
+.wrapper-icons:first-of-type {
+    margin-top: 15px;
 }
