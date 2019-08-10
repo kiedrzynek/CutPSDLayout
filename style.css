@@ -48,7 +48,6 @@ section {
 
 header {
     background-color: #000;
-    background-image: url(img/hero2.png);
     background-size: cover;
     background-position: bottom;
     height: 98vh;
@@ -63,6 +62,8 @@ header {
 nav {
     border-bottom: 4px solid #efefef;
     background-color: rgba(255, 255, 255, 0.4);
+    position: relative;
+    z-index: 3;
 }
 
 
@@ -147,13 +148,54 @@ nav {
     cursor: pointer;
 }
 
-.slider-banner {
+
+/*--------- SLIDER ----------------------*/
+
+header h1,
+header h2 {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
+    z-index: 2;
+}
+
+
+.carousel-container {
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    bottom: 100px;
+    z-index: 1;
+}
+
+.carousel-slide {
+    display: flex;
+    height: 90vh;
+}
+
+.carousel-slide img {
+    object-fit: cover;
+}
+
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    font-size: 4em;
+    color: #fff;
+    cursor: pointer;
+}
+
+#prevBtn {
+    left: 5%;
+}
+
+#nextBtn {
+    right: 5%;
 }
 
 .subtext {
@@ -162,6 +204,8 @@ nav {
     font-weight: 100;
     font-size: 100%;
 }
+
+
 
 /*--------- SECOND SECTION - TEXT ----------------------*/
 
@@ -336,3 +380,4 @@ footer li:nth-child(3) > p:first-of-type {
 .wrapper-icons:first-of-type {
     margin-top: 15px;
 }
+
