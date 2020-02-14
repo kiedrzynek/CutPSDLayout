@@ -135,15 +135,36 @@ nav {
     padding: 10px 70px 10px 100px;
 }
 
+.search-wrapper {
+    position: relative;
+    width: 195px;
+    height: 35px;
+}
+
 .search-wrapper input {
-    padding: 8px 14px 8px 14px;
+    width: 100%;
+    height: 100%;
     font-family: 'Open Sans';
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    padding-left: 20px;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    padding-left: 20px;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    padding-left: 20px;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    padding-left: 20px;
+  }
+
 .search-wrapper .fa-search {
-    position: relative;
-    top: 2px;
-    right: 30px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-50%, -50%);
     font-size: 17px;
     cursor: pointer;
 }
