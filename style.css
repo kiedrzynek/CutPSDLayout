@@ -111,7 +111,7 @@ nav {
 
 .nav-buttons a {
     text-decoration: none;
-    color: #8b8b8b;
+    color: #5c5c5c;
     font-family: sans-serif;
     font-size: 90%;
     letter-spacing: -0.5px;
@@ -405,3 +405,33 @@ footer li:nth-child(3) > p:first-of-type {
     margin-top: 15px;
 }
 
+
+@media only screen and (max-width: 800px) {
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    .subtext {
+        font-size: .9em;
+    }
+}
+
+@media only screen and (max-width: 1040px) {
+    .logo {
+        margin-left: 5%;
+    }
+    
+    .sm-icons {
+        margin-right: 5%;
+    }
+
+    .wrapper-buttons {
+        margin: 10px 5%;
+        padding: 10px 0;
+    }
+
+    .nav-buttons li {
+        padding: 5px;
+    }
+}
