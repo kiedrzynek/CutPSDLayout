@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|PT+Sans" rel="stylesheet">
@@ -34,13 +35,22 @@
                     </div>
                 </div>
             </nav>
-            
-        </header>
-        
-        <div class="slider-banner">
             <h1>Welcome to our web site</h1>
             <h2 class="subtext">Lorem Ipsum is simply dummy text of the printing and typesettin industry. Lorem Ipsum has been the industry's standard dummy text ever since.</h2>
-        </div>
+            <div class="carousel-container">
+                    <i class="fas fa-chevron-left" id="prevBtn"></i>
+                    <i class="fas fa-chevron-right" id="nextBtn"></i>
+                    <div class="carousel-slide">
+                        <img src="./img/hero.jpg" id="lastClone" alt="">
+                        <img src="./img/hero_large.jpg" alt="">
+                        <img src="./img/hero.jpg" alt="">
+                        <img src="./img/hero_large.jpg" alt="">
+                        <img src="./img/hero.jpg" alt="">
+                        <img src="./img/hero_large.jpg" id="firstClone" alt="">
+                    </div>
+                </div>
+        </header>
+
         
         
         <section class="about-us">
@@ -150,7 +160,7 @@
                 </ul>
             </aside>
         </footer>
-                
+        <script src="slider.js"></script>
     </body>
     
 </html>
