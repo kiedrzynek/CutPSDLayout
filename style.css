@@ -23,7 +23,7 @@ h2 {
     font-size: 1rem;
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
+    
 }
 
 h3 {
@@ -232,6 +232,7 @@ nav {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    color: #fff;
 }
 
 .arrow {
@@ -273,17 +274,18 @@ nav {
 /*------ THIRD SECTION - ICONS ------------------------*/
 
 .icons {
-    border-bottom: 2px solid #eeeeee;
+    position: relative;
 }
 
 .icons:after {
     content: "";
-    position: relative;
-    left: 45%;
-    bottom: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: -80px;
+    transform: translate(-50%);
     border-style: solid;
     border-color: transparent transparent #eeeeee transparent;      /* triangle */
-    border-width: 60px;                                         /* bigger */
+    border-width: 40px 40px 50px 40px;                                /* bigger */
 }
 
 .icons ul {
@@ -437,18 +439,9 @@ footer li:nth-child(3) > p:first-of-type {
 }
 
 
-@media only screen and (max-width: 800px) {
 
-    h1 {
-        font-size: 1.5em;
-    }
 
-    .subtext {
-        font-size: .9em;
-    }
-}
-
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1100px) {
     .logo {
         margin-left: 5%;
     }
@@ -462,7 +455,81 @@ footer li:nth-child(3) > p:first-of-type {
         padding: 10px 0;
     }
 
+    .subtext {
+        font-size: .9em;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
     .nav-buttons li {
         padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    section,
+    .gallery-wrapper {
+        margin: 0 5%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtext {
+        font-size: .9em;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .arrow {
+        padding: 15px;
+    }
+
+    footer ul:first-child {
+        margin: 0 5% 2% 5%;
+        font-size: .8em;
+    }
+
+    .footer-signature {
+        font-size: .8em;
+    }
+
+    .footer-signature p {
+        margin: 0 0 0 5%;
+    }
+
+    .footer-signature .sm-icons {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+
+    h1 {
+        font-size: 1.4em;
+    }
+
+    .subtext {
+        font-size: .7em;
+        max-width: 250px;
+        margin: 1% auto;
+    }
+
+    .arrow {
+        padding: 8px;
+    }
+
+    #arrow-right {
+        margin-right: 5%;
+    }
+
+    #arrow-left {
+        margin-left: 5%;
+    }
+
+    footer ul:first-child li {
+        width: 100%;
     }
 }
