@@ -5,6 +5,11 @@ let sliderImages = document.querySelectorAll('.slide'),
     indicatorParents = document.querySelector('.slider ul'),
     current = 0;
 
+function selectDot() {
+    document.querySelector('.slider .selected').classList.remove('selected');
+    indicatorParents.children[current].classList.add('selected');
+}
+
 //clear all images
 function reset() {
     for(let i = 0; i < sliderImages.length; i++) {
@@ -15,31 +20,29 @@ function reset() {
 function startSlide() {
     reset();
     sliderImages[0].style.display = 'block';
-}
+};
 
 //show prev
 function slideLeft() {
     reset();
     sliderImages[current - 1].style.display = 'block';
     current--;
-}
+};
 
 //show next
 function slideRight() {
     reset();
     sliderImages[current + 1].style.display = 'block';
     current++;
-}
+};
 
 //left arrow click
 arrowLeft.addEventListener('click', function() {
     if(current === 0) {
         current = sliderImages.length;
-    }
-    
+    };
     slideLeft();
-    document.querySelector('.slider .selected').classList.remove('selected');
-    indicatorParents.children[current].classList.add('selected');
+    selectDot();
 });
 
 //right arrow click
@@ -48,8 +51,7 @@ arrowRight.addEventListener('click', function() {
         current = -1;
     }
     slideRight();
-    document.querySelector('.slider .selected').classList.remove('selected');
-    indicatorParents.children[current].classList.add('selected');
+    selectDot();
 });
 
 //indicators
@@ -58,10 +60,9 @@ document.querySelectorAll('.slider ul li').forEach(function(indicator, index) {
         current = index;
         reset();
         sliderImages[current].style.display = 'block';
-        current--;
         document.querySelector('.slider .selected').classList.remove('selected');
         indicator.classList.add('selected');
-    })
-})
+    });
+});
 
 startSlide();
