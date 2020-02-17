@@ -1,41 +1,51 @@
 
-var carouselSlide = document.querySelector('.carousel-slide');
-var carouselImages = document.querySelectorAll('.carousel-slide img');
+let sliderImages = document.querySelectorAll('.slide'),
+    arrowLeft = document.querySelector('#arrow-left'),
+    arrowRight = document.querySelector('#arrow-right'),
+    current = 0;
 
-var prevBtn = document.querySelector('#prevBtn');
-var nextBtn = document.querySelector('#nextBtn');
-
-var counter = 1;
-
-var size = carouselImages[0].clientWidth;
-
-carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-
-nextBtn.addEventListener('click', function() {
-    if (counter >= carouselImages.length -1) return;
-    carouselSlide.style.transition = "transform 0.5s ease-in-out";
-    counter++;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-prevBtn.addEventListener('click', function() {
-    carouselSlide.style.transition = "transform 0.5s ease-in-out";
-    counter--;
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-});
-
-carouselSlide.addEventListener('transitionend', function() {
-    if (carouselImages[counter].id === 'lastClone') {
-        carouselSlide.style.transition = 'none';
-        counter = carouselImages.length - 2;
-        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+//clear all images
+function reset() {
+    for(let i = 0; i < sliderImages.length; i++) {
+        sliderImages[i].style.display = 'none';
     }
-    if (carouselImages[counter].id === 'firstClone') {
-        carouselSlide.style.transition = 'none';
-        counter = carouselImages.length - counter;
-        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+}
+//init slider
+function startSlide() {
+    reset();
+    sliderImages[0].style.display = 'block';
+}
+
+//show prev
+function slideLeft() {
+    reset();
+    sliderImages[current - 1].style.display = 'block';
+    current--;
+}
+
+//show next
+function slideRight() {
+    reset();
+    sliderImages[current + 1].style.display = 'block';
+    current++;
+}
+
+//left arrow click
+arrowLeft.addEventListener('click', function() {
+    if(current === 0) {
+        current = sliderImages.length;
     }
+    slideLeft();
+});
+
+//right arrow click
+arrowRight.addEventListener('click', function() {
+    if(current === sliderImages.length -1) {
+        current = -1;
+    }
+    slideRight();
 });
 
 
 
+startSlide();
