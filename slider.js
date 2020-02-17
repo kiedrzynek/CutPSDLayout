@@ -2,6 +2,7 @@
 let sliderImages = document.querySelectorAll('.slide'),
     arrowLeft = document.querySelector('#arrow-left'),
     arrowRight = document.querySelector('#arrow-right'),
+    indicatorParents = document.querySelector('.slider ul'),
     current = 0;
 
 //clear all images
@@ -35,7 +36,10 @@ arrowLeft.addEventListener('click', function() {
     if(current === 0) {
         current = sliderImages.length;
     }
+    
     slideLeft();
+    document.querySelector('.slider .selected').classList.remove('selected');
+    indicatorParents.children[current].classList.add('selected');
 });
 
 //right arrow click
@@ -44,8 +48,20 @@ arrowRight.addEventListener('click', function() {
         current = -1;
     }
     slideRight();
+    document.querySelector('.slider .selected').classList.remove('selected');
+    indicatorParents.children[current].classList.add('selected');
 });
 
-
+//indicators
+document.querySelectorAll('.slider ul li').forEach(function(indicator, index) {
+    indicator.addEventListener('click', function() {
+        current = index;
+        reset();
+        sliderImages[current].style.display = 'block';
+        current--;
+        document.querySelector('.slider .selected').classList.remove('selected');
+        indicator.classList.add('selected');
+    })
+})
 
 startSlide();
