@@ -60,6 +60,10 @@ header {
     background-color: #252323;
 }
 
+.mobile-menu {
+    display: none;
+}
+
 nav {
     border-bottom: 4px solid #efefef;
     background-color: rgba(255, 255, 255, 0.4);
@@ -506,6 +510,76 @@ footer li:nth-child(3) > p:first-of-type {
 }
 
 @media only screen and (max-width: 380px) {
+
+    .wrapper {
+        position: fixed;
+        width: 100%;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #00bac6;
+        text-transform: uppercase;
+        border: 1px solid #00bac6;
+        background-color: transparent;
+        height: 40px;
+        width: 60px;
+        outline: none;
+    }
+
+    .mobile-menu:active,
+    .mobile-menu:hover {
+        border-width: 2px;
+    }
+
+    nav {
+        position: fixed;
+    }
+
+    .wrapper-buttons {
+        margin-top: 50px;
+    }
+
+    .nav-buttons a {
+        padding: 4px 0;
+    }
+
+    .search-wrapper {
+        margin-top: 10px;
+    }
+
+    .sm-icons {
+        margin: 12px 10px 0 0;
+    }
+
+    .sm-icons a:link,
+    .sm-icons a:visited {
+        margin: 5px;
+    }
+
+    .sm-icons a i {
+        font-size: 17px;
+    }
+
+    nav {
+        background-color: #333;
+    }
+
+    .wrapper-buttons {
+       flex-direction: column;
+    }
+
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-buttons li a {
+        color: #dbdbdb;
+    }
 
     h1 {
         font-size: 1.4em;
