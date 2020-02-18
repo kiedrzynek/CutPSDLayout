@@ -606,6 +606,10 @@ footer li:nth-child(3) > p:first-of-type {
     footer ul:first-child li {
         width: 100%;
     }
+   
+    .footer-signature p {
+        max-width: 170px;
+    }
 }
 
 @media only screen and (max-width: 320px) {
