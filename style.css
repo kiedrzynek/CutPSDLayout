@@ -269,7 +269,7 @@ nav {
 
 /*--------- SECOND SECTION - TEXT ----------------------*/
 
-.about-us h2 {
+#about-us h2 {
     margin: 30px 20px 20px 20px;
     text-align: center;
     text-transform: uppercase;
@@ -277,11 +277,11 @@ nav {
 
 /*------ THIRD SECTION - ICONS ------------------------*/
 
-.icons {
+#icons {
     position: relative;
 }
 
-.icons:after {
+#icons:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -292,7 +292,7 @@ nav {
     border-width: 40px 40px 50px 40px;                                /* bigger */
 }
 
-.icons ul {
+#icons ul {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -305,7 +305,7 @@ nav {
     text-align: center;
 }
 
-.icons i {
+#icons i {
     font-size: 400%;
     margin-top: 40px;
 }
@@ -540,6 +540,7 @@ footer li:nth-child(3) > p:first-of-type {
     }
 
     .wrapper-buttons {
+        display: none;
         margin-top: 50px;
     }
 
@@ -565,7 +566,7 @@ footer li:nth-child(3) > p:first-of-type {
     }
 
     nav {
-        background-color: #333;
+        background-color: #333333bb;
     }
 
     .wrapper-buttons {
