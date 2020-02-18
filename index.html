@@ -12,6 +12,9 @@
             <nav>
                 <div class="wrapper">
                     <img src="img/logo.png" alt="WebWorld" class="logo">
+                    <button class="mobile-menu">
+                        menu
+                    </button>
                     <ul class="sm-icons">
                         <li><a href="#"><i class="fas fa-wifi"></i></a></li>
                         <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -23,11 +26,11 @@
                 <div class="wrapper-buttons">
                     <ul class="nav-buttons">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#about-us">About us</a></li>
+                        <li><a href="#icons">Service</a></li>
+                        <li><a href="#partners">Pages</a></li>
+                        <li><a href="#posts">Blog</a></li>
+                        <li><a href="#contact">Contact us</a></li>
                     </ul>
                     <div class="search-wrapper">
                         <input type="search" placeholder="Search Something" results="0">
@@ -75,12 +78,12 @@
 
         
         
-        <section class="about-us">
+        <section id="about-us">
             <h2>Lorem ipsum is <strong>simply dummy</strong> of the printing.</h2>
             <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a gallery of type and scrambled it to make atype specimen book.<br/> It has survived not only five centuries.</h3>
         </section>
         
-        <section class="icons">
+        <section id="icons">
             <ul class="icons-list">
                 <li class="icons-list">
                     <i class="fas fa-desktop icon-big"></i>
@@ -137,7 +140,7 @@
             </div>
         </section>
         
-        <section class="partners">
+        <section id="partners">
             <div class="partners-logos-wrapper">
                 <img src="img/dribbble.svg">
                 <img src="img/github-2.svg">
@@ -148,7 +151,7 @@
         
         <footer>
             <ul>
-                <li>
+                <li id="posts">
                     <h5>Populr posts</h5>
                     <p>Lorem ipsum is simply dummy text of the printing.</p>
                     <i class="far fa-clock"></i>25-September 2013
@@ -164,7 +167,7 @@
                     <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alternation in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
                     <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything.</p>
                 </li>
-                <li>
+                <li id="contact">
                     <h5>Get in touch</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</p>
                     <div class="wrapper-icons"><i class="fas fa-map-marker-alt"></i>Texas, US</div>
@@ -182,6 +185,7 @@
                 </ul>
             </aside>
         </footer>
+        <script src="mobile-menu.js"></script>
         <script src="slider.js"></script>
     </body>
     

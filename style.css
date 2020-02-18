@@ -23,7 +23,7 @@ h2 {
     font-size: 1rem;
     font-weight: 300;
     font-family: 'Open Sans', sans-serif;
-    color: #fff;
+    
 }
 
 h3 {
@@ -58,6 +58,10 @@ header {
 .wrapper {
     height: 60px;
     background-color: #252323;
+}
+
+.mobile-menu {
+    display: none;
 }
 
 nav {
@@ -232,6 +236,7 @@ nav {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    color: #fff;
 }
 
 .arrow {
@@ -264,7 +269,7 @@ nav {
 
 /*--------- SECOND SECTION - TEXT ----------------------*/
 
-.about-us h2 {
+#about-us h2 {
     margin: 30px 20px 20px 20px;
     text-align: center;
     text-transform: uppercase;
@@ -272,21 +277,22 @@ nav {
 
 /*------ THIRD SECTION - ICONS ------------------------*/
 
-.icons {
-    border-bottom: 2px solid #eeeeee;
+#icons {
+    position: relative;
 }
 
-.icons:after {
+#icons:after {
     content: "";
-    position: relative;
-    left: 45%;
-    bottom: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: -80px;
+    transform: translate(-50%);
     border-style: solid;
     border-color: transparent transparent #eeeeee transparent;      /* triangle */
-    border-width: 60px;                                         /* bigger */
+    border-width: 40px 40px 50px 40px;                                /* bigger */
 }
 
-.icons ul {
+#icons ul {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -299,7 +305,7 @@ nav {
     text-align: center;
 }
 
-.icons i {
+#icons i {
     font-size: 400%;
     margin-top: 40px;
 }
@@ -469,6 +475,86 @@ footer li:nth-child(3) > p:first-of-type {
     h1 {
         font-size: 2em;
     }
+    
+    .wrapper {
+        position: fixed;
+        width: 100%;
+    }
+
+    .mobile-menu {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #00bac6;
+        text-transform: uppercase;
+        border: 1px solid #00bac6;
+        background-color: transparent;
+        height: 40px;
+        width: 60px;
+        outline: none;
+    }
+
+    .mobile-menu:active,
+    .mobile-menu:hover {
+        border-width: 2px;
+    }
+
+    nav {
+        position: fixed;
+    }
+
+    .wrapper-buttons {
+        display: none;
+        margin-top: 50px;
+    }
+
+    .nav-buttons a {
+        padding: 4px 0;
+    }
+
+    .search-wrapper {
+        margin-top: 10px;
+    }
+
+    .sm-icons {
+        margin: 12px 10px 0 0;
+    }
+
+    .sm-icons a:link,
+    .sm-icons a:visited {
+        margin: 5px;
+    }
+
+    .sm-icons a i {
+        font-size: 17px;
+    }
+
+    nav {
+        background-color: #333333bb;
+    }
+
+    .wrapper-buttons {
+       flex-direction: column;
+    }
+
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-buttons li a {
+        color: #dbdbdb;
+    }
+
+    section,
+    .gallery-wrapper {
+        margin: 0 5%;
+    }
+
+    h1 {
+        font-size: 1.7em;
+    }
 
     .subtext {
         font-size: .9em;
@@ -477,23 +563,53 @@ footer li:nth-child(3) > p:first-of-type {
     }
 
     .arrow {
-        padding: 15px;
+        padding: 8px;
+    }
+
+    #arrow-right {
+        margin-right: 5%;
+    }
+
+    #arrow-left {
+        margin-left: 5%;
+    }
+
+    footer ul:first-child {
+        margin: 0 5% 2% 5%;
+        font-size: .8em;
+    }
+
+    .footer-signature {
+        font-size: .8em;
+    }
+
+    .footer-signature p {
+        margin: 0 0 0 5%;
+    }
+
+    .footer-signature .sm-icons {
+        margin: 0;
     }
 }
 
 @media only screen and (max-width: 380px) {
-
     h1 {
-        font-size: 2em;
+        font-size: 1.4em;
     }
 
     .subtext {
-        font-size: .9em;
-        max-width: 400px;
-        margin: 0 auto;
+        font-size: .7em;
+        max-width: 250px;
+        margin: 1% auto;
     }
 
-    .arrow {
-        padding: 15px;
+    footer ul:first-child li {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.2em;
     }
 }
