@@ -213,16 +213,16 @@ nav {
 }
 
 .slide1 {
-    background-image: url(/img/hero_large.jpg);
+    background-image: url('./img/hero_large.jpg');
 }
 .slide2 {
-    background-image: url(/img/hero.jpg);
+    background-image: url('./img/hero.jpg');
 }
 .slide3 {
-    background-image: url(/img/hero_large.jpg);
+    background-image: url('./img/hero_large.jpg');
 }
 .slide4 {
-    background-image: url(/img/hero.jpg);
+    background-image: url('./img/hero.jpg');
 }
 
 .slide-content {
@@ -437,18 +437,9 @@ footer li:nth-child(3) > p:first-of-type {
 }
 
 
-@media only screen and (max-width: 800px) {
 
-    h1 {
-        font-size: 1.5em;
-    }
 
-    .subtext {
-        font-size: .9em;
-    }
-}
-
-@media only screen and (max-width: 1040px) {
+@media only screen and (max-width: 1100px) {
     .logo {
         margin-left: 5%;
     }
@@ -462,7 +453,47 @@ footer li:nth-child(3) > p:first-of-type {
         padding: 10px 0;
     }
 
+    .subtext {
+        font-size: .9em;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
     .nav-buttons li {
         padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtext {
+        font-size: .9em;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .arrow {
+        padding: 15px;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtext {
+        font-size: .9em;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .arrow {
+        padding: 15px;
     }
 }
